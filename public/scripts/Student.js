@@ -166,6 +166,12 @@ class StudentView {
 		btnFooterClose.setAttribute('type', 'button');
 		btnFooterClose.setAttribute('data-dismiss', 'modal');
 		btnFooterClose.textContent = 'Close';
+
+		let btnFooterClose1 = viewHelper.createElement('button', ['btn','btn-secondary']);
+		btnFooterClose1.setAttribute('type', 'button');
+		btnFooterClose1.setAttribute('data-dismiss', 'modal');
+		btnFooterClose1.textContent = 'Add';
+		
 		let modalFooter = viewHelper.getElement('#studentModalFooter');
 		modalFooter.replaceChildren();
 		modalFooter.append(btnFooterClose);
