@@ -154,8 +154,8 @@ class StudentView {
 		let modalTitle = viewHelper.getElement('#studentModalLabel');
 		modalTitle.textContent = student.name;
 
-		let classRow = this.createDataRow('Class', student.class);
-		let majorRow = this.createDataRow('Major', student.major);
+		//let classRow = this.createDataRow('Class', student.class);
+		//let majorRow = this.createDataRow('Major', student.major);
 		//let deleteRow = this.createDeleteRow(id);
 
 		let modalBody = viewHelper.getElement('#studentModalBody');
