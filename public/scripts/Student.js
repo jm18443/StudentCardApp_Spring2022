@@ -176,6 +176,10 @@ class StudentView {
 		modalFooter.replaceChildren();
 		modalFooter.append(btnFooterClose);
 
+		let modalFooter1 = viewHelper.getElement('#studentModalFooter');
+		modalFooter1.replaceChildren();
+		modalFooter.append(btnFooterClose1);
+		
 		const modal = document.querySelector('#studentModal');
 		$('#studentModal').modal('toggle');
 
