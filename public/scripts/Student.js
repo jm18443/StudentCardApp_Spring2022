@@ -149,37 +149,35 @@ class StudentView {
 	}
 
 	createStudentModal(id){
-
+		
 		let student = this.studentData.find(x=>x.id === id);
 		let modalTitle = viewHelper.getElement('#studentModalLabel');
 		modalTitle.textContent = student.name;
 
-		//let classRow = this.createDataRow('Class', student.class);
-		//let majorRow = this.createDataRow('Major', student.major);
-		//let deleteRow = this.createDeleteRow(id);
+		let classRow = this.createDataRow('Class', student.class);
+		let majorRow = this.createDataRow('Major', student.major);
+		let deleteRow = this.createDeleteRow(id);
 
 		let modalBody = viewHelper.getElement('#studentModalBody');
 		modalBody.replaceChildren();
 		modalBody.append( classRow, majorRow, deleteRow);
-/*
+
 		let btnFooterClose = viewHelper.createElement('button', ['btn','btn-primary']);
 		btnFooterClose.setAttribute('type', 'button');
 		btnFooterClose.setAttribute('data-dismiss', 'modal');
 		btnFooterClose.textContent = 'Close';
-*/
-		let btnFooterClose1 = viewHelper.createElement('button', ['btn','btn-secondary']);
+
+		let btnFooterClose1 = viewHelper.createElement('button', ['btn', 'btn-secondary']);
 		btnFooterClose1.setAttribute('type', 'button');
 		btnFooterClose1.setAttribute('data-dismiss', 'modal');
 		btnFooterClose1.textContent = 'Add';
-		/*
+
 		let modalFooter = viewHelper.getElement('#studentModalFooter');
 		modalFooter.replaceChildren();
 		modalFooter.append(btnFooterClose);
-*/
-		let modalFooter1 = viewHelper.getElement('#studentModalFooter');
-		modalFooter1.replaceChildren();
-		modalFooter1.append(btnFooterClose1);
-		
+		modalFooter.append(btnFooterClose1);
+
+
 		const modal = document.querySelector('#studentModal');
 		$('#studentModal').modal('toggle');
 
