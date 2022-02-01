@@ -161,24 +161,24 @@ class StudentView {
 		let modalBody = viewHelper.getElement('#studentModalBody');
 		modalBody.replaceChildren();
 		modalBody.append( classRow, majorRow, deleteRow);
-
+/*
 		let btnFooterClose = viewHelper.createElement('button', ['btn','btn-primary']);
 		btnFooterClose.setAttribute('type', 'button');
 		btnFooterClose.setAttribute('data-dismiss', 'modal');
 		btnFooterClose.textContent = 'Close';
-
+*/
 		let btnFooterClose1 = viewHelper.createElement('button', ['btn','btn-secondary']);
 		btnFooterClose1.setAttribute('type', 'button');
 		btnFooterClose1.setAttribute('data-dismiss', 'modal');
 		btnFooterClose1.textContent = 'Add';
-		
+		/*
 		let modalFooter = viewHelper.getElement('#studentModalFooter');
 		modalFooter.replaceChildren();
 		modalFooter.append(btnFooterClose);
-
+*/
 		let modalFooter1 = viewHelper.getElement('#studentModalFooter');
 		modalFooter1.replaceChildren();
-		modalFooter.append(btnFooterClose1);
+		modalFooter1.append(btnFooterClose1);
 		
 		const modal = document.querySelector('#studentModal');
 		$('#studentModal').modal('toggle');
