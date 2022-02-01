@@ -156,7 +156,7 @@ class StudentView {
 
 		let classRow = this.createDataRow('Class', student.class);
 		let majorRow = this.createDataRow('Major', student.major);
-		let deleteRow = this.createDeleteRow(id);
+		//let deleteRow = this.createDeleteRow(id);
 
 		let modalBody = viewHelper.getElement('#studentModalBody');
 		modalBody.replaceChildren();
